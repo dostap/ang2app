@@ -11,19 +11,24 @@ import { DateFormatterPipe } from './date-formatter.pipe';
 import { routing } from './app.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { WeatherComponent } from './weather/weather.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     StocksComponent,
     HighlightDirective,
     DateFormatterPipe,
-    DashboardComponent
+    DashboardComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    NgbModule.forRoot()
   ],
   providers: [StockService],
   bootstrap: [AppComponent]
